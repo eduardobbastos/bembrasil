@@ -239,7 +239,8 @@ const PortfolioApp = (() => {
             }
             if (elPhone && phone) {
                 const sanitizedPhone = phone.replace(/\D/g, '');
-                elPhone.href = `https://wa.me/${sanitizedPhone}`;
+                globalWhatsappNumber = sanitizedPhone;
+                elPhone.href = `https://wa.me/${sanitizedPhone}?text=${encodeURIComponent('Olá, Bem Brasil Regional! Gostaria de mais informações.')}`;
                 if (elPhoneText) elPhoneText.innerText = phone;
             }
 
@@ -327,7 +328,7 @@ const PortfolioApp = (() => {
                             if (project.descricao) text += `\n${project.descricao}\n`;
                             text += `\n\n📷 *Acesse a imagem da obra:*\n${project.mainImg}#.jpg`;
                             
-                            const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+                            const waUrl = `https://api.whatsapp.com/send?phone=${globalWhatsappNumber}&text=${encodeURIComponent(text)}`;
                             window.open(waUrl, '_blank');
                         });
                     }

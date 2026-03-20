@@ -3,7 +3,7 @@
     /* Vibrant Orange */
     --secondary-color: #613318;
     /* Dark Brown */
-    --text-color: #222222;
+    --text-color: #613318;
     --text-muted: #555555;
     --bg-color: #FFFFFF;
     --glass-bg: rgba(0, 0, 0, 0.04);
@@ -256,9 +256,11 @@ h3 {
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 6rem;
+    font-family: 'Italiana', serif;
     margin-bottom: 20px;
     line-height: 1.1;
+    letter-spacing: 2px;
 }
 
 .hero-title span {
