@@ -325,7 +325,7 @@ const PortfolioApp = (() => {
                             if (project.colecao) text += `*Coleção:* ${project.colecao}\n`;
                             if (project.dimensoes) text += `*Dimensões:* ${project.dimensoes}\n`;
                             if (project.descricao) text += `\n${project.descricao}\n`;
-                            text += `\n*Imagem:* ${project.mainImg}`;
+                            text += `\n\n📷 *Acesse a imagem da obra:*\n${project.mainImg}#.jpg`;
                             
                             const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
                             window.open(waUrl, '_blank');
