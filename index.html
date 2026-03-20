@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cknetto interiores | Design de Interiores e Consultoria</title>
+    <title>Bem Brasil Regional | Design de Interiores e Consultoria</title>
     <meta name="description"
-        content="Ericka Netto cria ambientes memoráveis com personalização, funcionalidade e sustentabilidade. Design de interiores, ambientação e consultoria online.">
+        content="Bem Brasil Regional cria ambientes memoráveis com personalização, funcionalidade e sustentabilidade. Design de interiores, ambientação e consultoria online.">
 
     <!-- SEO & Social Share (Open Graph) -->
-    <meta property="og:title" content="cknetto interiores - Design de Interiores Memoráveis">
+    <meta property="og:title" content="Bem Brasil Regional - Design de Interiores Memoráveis">
     <meta property="og:description"
         content="Projetos que vão além do visual, transformando espaços em lugares cheios de significado.">
-    <meta property="og:image" content="https://eduardobbastos.github.io/cknetto/assets/portfolio/ericka_netto.jpg">
-    <meta property="og:url" content="https://eduardobbastos.github.io/cknetto/">
+    <meta property="og:image"
+        content="https://eduardobbastos.github.io/bembrasilregional/assets/portfolio/ericka_netto.jpg">
+    <meta property="og:url" content="https://eduardobbastos.github.io/bembrasilregional/">
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cknetto interiores">
+    <meta name="twitter:title" content="Bem Brasil Regional">
     <meta name="twitter:description" content="Design de interiores personalizado e funcional em Rio de Janeiro.">
-    <meta name="twitter:image" content="https://eduardobbastos.github.io/cknetto/assets/portfolio/ericka_netto.jpg">
+    <meta name="twitter:image"
+        content="https://eduardobbastos.github.io/bembrasilregional/assets/portfolio/ericka_netto.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,23 +40,17 @@
     <header class="header">
         <nav class="nav container">
             <a href="#home" class="logo">
-                <img src="https://lh3.googleusercontent.com/u/0/d/1rQQpfq2N7snAoA8oUjyQ-XmWFBhHbQ1Z" alt="cknetto"
-                    class="logo-img">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1rQQpfq2N7snAoA8oUjyQ-XmWFBhHbQ1Z"
+                    alt="bembrasilregional" class="logo-img">
                 <div class="logo-text-group">
-                    <span class="logo-name">CKNETTO</span>
-                    <span class="logo-type">INTERIORES</span>
+                    <span class="logo-name">BEM BRASIL</span>
+                    <span class="logo-type">REGIONAL</span>
                 </div>
             </a>
             <ul class="nav-list">
                 <li><a href="index.html#home" class="nav-link">Home</a></li>
-                <li><a href="index.html#projects" class="nav-link">Projetos</a></li>
-                <li class="nav-item-dropdown">
-                    <a href="index.html#services" class="nav-link">Serviços <span class="caret">&#9662;</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="subpage.html?page=1" class="dropdown-link" id="submenu-pag1">Carregando...</a></li>
-                        <li><a href="subpage.html?page=2" class="dropdown-link" id="submenu-pag2">Carregando...</a></li>
-                    </ul>
-                </li>
+                <li><a href="index.html#projects" class="nav-link">Catálogo</a></li>
+                <li><a href="index.html#services" class="nav-link">Obras e Estilos</a></li>
                 <li><a href="index.html#about" class="nav-link">Sobre</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contato</a></li>
             </ul>
@@ -69,7 +65,6 @@
     <main>
         <!-- Hero Section -->
         <section class="hero" id="home">
-            <div id="hero-puzzle" class="hero-puzzle"></div>
             <div class="hero-overlay"></div>
             <div class="hero-content container">
                 <h1 class="hero-title reveal">Essência & <br><span>Inovação</span></h1>
@@ -77,21 +72,33 @@
                     através do design contemporâneo.</p>
                 <a href="#projects" class="btn btn-primary reveal">Ver Projetos</a>
             </div>
-            <div class="scroll-indicator">
-                <span></span>
+            
+            <div class="sea-waves">
+                <svg viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use href="#gentle-wave" x="48" y="0" fill="rgba(139, 90, 43, 0.7)" />
+                        <use href="#gentle-wave" x="48" y="3" fill="rgba(204, 169, 105, 0.7)" />
+                        <use href="#gentle-wave" x="48" y="5" fill="rgba(93, 51, 20, 0.7)" />
+                        <use href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section class="projects section" id="projects">
             <div class="container container-large">
-                <h2 class="section-title reveal">Projetos</h2>
+                <h2 class="section-title reveal">Catálogo</h2>
             </div>
 
-            <div class="carousel-container reveal">
-                <div class="carousel-track" id="projects-carousel">
-                    <!-- Dynamic cards will be injected here -->
-                    <div class="loader">Carregando projetos...</div>
+            <div class="catalog-container carousel-container reveal"
+                style="position: relative; overflow: hidden; width: 100%;">
+                <div class="catalog-track" id="catalog-track" style="display: flex; transition: transform 0.6s ease;">
+                    <!-- Slides injected here -->
+                    <div class="loader">Carregando catálogo...</div>
                 </div>
 
                 <button class="carousel-btn prev" aria-label="Anterior">&lsaquo;</button>
@@ -103,7 +110,7 @@
         <section class="about section" id="about">
             <div class="about-container container">
                 <div class="about-content reveal">
-                    <h2 class="section-title left" id="about-title">Ericka Netto Sobre</h2>
+                    <h2 class="section-title left" id="about-title">Bem Brasil Regional Sobre</h2>
                     <p class="about-text" id="about-text">
                         <strong>Quero criar ambientes memoráveis!</strong><br><br>
                         Desenvolvo projetos que vão além do visual, transformando espaços em lugares cheios de
@@ -115,17 +122,18 @@
                     </p>
                     <div class="stats">
                         <div class="stat-item">
-                            <span class="stat-num">50+</span>
-                            <span class="stat-label">Projetos</span>
+                            <span class="stat-num">1000+</span>
+                            <span class="stat-label">Peças</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-num">10</span>
-                            <span class="stat-label">Anos de Exp</span>
+                            <span class="stat-num">5</span>
+                            <span class="stat-label">Anos vivendo arte</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-img-wrapper reveal">
-                    <img id="about-img" src="assets/portfolio/ericka_netto.jpg" alt="Ericka Netto" class="about-img">
+                    <img id="about-img" src="assets/portfolio/ericka_netto.jpg" alt="Bem Brasil Regional"
+                        class="about-img">
                 </div>
             </div>
         </section>
@@ -133,78 +141,106 @@
         <!-- Services Section -->
         <section class="services section" id="services">
             <div class="container text-center">
-                <h2 class="section-title reveal">Meus Serviços</h2>
-                <div class="services-grid" id="services-grid">
-                    <div class="loader">Carregando serviços...</div>
+                <h2 class="section-title reveal">Nossas Obras e Estilos</h2>
+            </div>
+            <div class="container container-small">
+                <div class="services-list" id="services-grid">
+                    <!-- Dynamic services will be injected here -->
+                    <div class="loader">Carregando obras e estilos...</div>
                 </div>
             </div>
         </section>
+
+        <div class="copacabana-waves"></div>
+
         <section class="contact section container" id="contact">
             <div class="contact-box reveal">
-                <h2 class="section-title" id="contact-slogan-main">Vamos planejar seu próximo espaço?</h2>
-                <p class="contact-description" id="contact-slogan-sub">Entre em contato para uma consultoria
-                    personalizada.</p>
-                <div class="contact-links">
-                    <a href="mailto:contato@cknetto.com" class="contact-link" id="contact-email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
+                <div class="contact-left">
+                    <h2 class="section-title" id="contact-slogan-main">Vamos planejar seu próximo espaço?</h2>
+                    <p class="contact-description" id="contact-slogan-sub">Entre em contato para uma consultoria
+                        personalizada.</p>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-links">
+                        <a href="mailto:contato@bembrasilregional.com" class="contact-link" id="contact-email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span id="contact-email-text">contato@bembrasilregional.com</span>
+                        </a>
+                        <a href="https://wa.me/5521998391925" target="_blank" class="contact-link" id="contact-phone">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span id="contact-phone-text">+21 99839-1925</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-address-section" style="margin-top: 40px; display: none;"
+                        id="address-container">
+                        <h3 class="font-brown"
+                            style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 15px;">
+                            Nosso Endereço</h3>
+                        <a href="#" target="_blank" class="contact-link font-brown" id="contact-address"
+                            style="font-size: 1.2rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="contact-icon font-brown" style="margin-right: -5px;">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span id="contact-address-text">Carregando...</span>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/bembrasilregionalinteriores/" target="_blank"
+                            class="social-link" id="contact-instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://br.pinterest.com/erickadesignerdeinteriores/" target="_blank"
+                            class="social-link" id="contact-pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      <a href="https://linktr.ee/" target="_blank" class="social-link"
+                        id="contact-linktree">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                            <path d="M12 2v20"></path>
+                            <path d="M12 12l-7-7"></path>
+                            <path d="M12 12l7-7"></path>
+                            <path d="M12 2v5"></path>
                         </svg>
-                        <span id="contact-email-text">contato@cknetto.com</span>
+                        Linktree
                     </a>
-                    <a href="https://wa.me/5521998391925" target="_blank" class="contact-link" id="contact-phone">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                            </path>
+                    <a href="https://www.facebook.com/" target="_blank" class="social-link"
+                        id="contact-facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                         </svg>
-                        <span id="contact-phone-text">+21 99839-1925</span>
+                        Facebook
                     </a>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/cknettointeriores/" target="_blank" class="social-link"
-                        id="contact-instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                        Instagram
-                    </a>
-                    <a href="https://br.pinterest.com/erickadesignerdeinteriores/" target="_blank" class="social-link"
-                        id="contact-pinterest">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
-                            <line x1="21" y1="10" x2="3" y2="10"></line>
-                            <line x1="21" y1="6" x2="3" y2="6"></line>
-                            <line x1="21" y1="14" x2="3" y2="14"></line>
-                            <line x1="21" y1="18" x2="3" y2="18"></line>
-                        </svg>
-                        Pinterest
-                    </a>
-                    <a href="https://www.linkedin.com/in/ericka-n-48422939/" target="_blank" class="social-link"
-                        id="contact-linkedin">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                        LinkedIn
-                    </a>
-                </div>
+                </div> <!-- End contact-right -->
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-content">
-            <p id="footer-rights">&copy; 2024 cknetto interiores. Todos os direitos reservados.</p>
+            <p id="footer-rights">&copy; 2024 Bem Brasil Regional. Todos os direitos reservados.</p>
             <p>Design by eduardo bastos consultorias</p>
         </div>
     </footer>

@@ -45,7 +45,7 @@ const Common = (() => {
         url = url.trim().replace(/^"|"$/g, '');
 
         if (url.includes('drive.google.com')) {
-            const idMatch = url.match(/\\/d\\/([^/&?]+)/) || url.match(/id=([^&]+)/);
+            const idMatch = url.match(/\/d\/([^/&?]+)/) || url.match(/id=([^&]+)/);
             if (idMatch && idMatch[1]) {
                 return `https://lh3.googleusercontent.com/u/0/d/${idMatch[1]}`;
             }
@@ -72,8 +72,8 @@ const Common = (() => {
                 inQuotes = !inQuotes;
             } else if (cc === ',' && !inQuotes) {
                 row.push(val); val = '';
-            } else if ((cc === '\\r' || cc === '\\n') && !inQuotes) {
-                if (cc === '\\r' && nc === '\\n') i++;
+            } else if ((cc === '\r' || cc === '\n') && !inQuotes) {
+                if (cc === '\r' && nc === '\n') i++;
                 row.push(val); val = '';
                 result.push(row); row = [];
             } else {
