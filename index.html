@@ -9,9 +9,9 @@
         content="Bem Brasil Regional cria ambientes memoráveis com personalização, funcionalidade e sustentabilidade. Design de interiores, ambientação e consultoria online.">
 
     <!-- SEO & Social Share (Open Graph) -->
-    <meta property="og:title" content="Bem Brasil Regional - Design de Interiores Memoráveis">
+    <meta property="og:title" content="Bem Brasil Regional - Obras">
     <meta property="og:description"
-        content="Projetos que vão além do visual, transformando espaços em lugares cheios de significado.">
+        content="Catálogos que vão além do visual, transformando espaços em lugares cheios de significado.">
     <meta property="og:image"
         content="https://eduardobbastos.github.io/bembrasilregional/assets/portfolio/ericka_netto.jpg">
     <meta property="og:url" content="https://eduardobbastos.github.io/bembrasilregional/">
@@ -34,7 +34,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="light-mode">
+    <div id="global-loader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #FAF8F5; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.6s ease;">
+        <div class="loader" style="width: 50px; height: 50px; border-color: rgba(139, 90, 43, 0.2); border-top-color: #8B5A2B;"></div>
+        <p style="margin-top: 20px; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #8B5A2B; letter-spacing: 2px; font-style: italic;">Iniciando...</p>
+    </div>
     <div class="custom-cursor"></div>
 
     <header class="header">
@@ -49,7 +53,7 @@
             </a>
             <ul class="nav-list">
                 <li><a href="index.html#home" class="nav-link">Home</a></li>
-                <li><a href="index.html#projects" class="nav-link">Catálogo</a></li>
+                <li><a href="index.html#projects" class="nav-link">Obras</a></li>
                 <li><a href="index.html#services" class="nav-link">Obras e Estilos</a></li>
                 <li><a href="index.html#about" class="nav-link">Sobre</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contato</a></li>
@@ -70,7 +74,7 @@
                 <h1 class="hero-title reveal">Essência & <br><span>Inovação</span></h1>
                 <p class="hero-description reveal">Criamos ambientes que contam histórias e elevam o seu estilo de vida
                     através do design contemporâneo.</p>
-                <a href="#projects" class="btn btn-primary reveal">Ver Projetos</a>
+                <a href="#projects" class="btn btn-primary reveal">Ver Catálogo</a>
             </div>
             
             <div class="sea-waves">
@@ -89,10 +93,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="projects section" id="projects">
-            <div class="container container-large">
-                <h2 class="section-title reveal">Catálogo</h2>
-            </div>
+        <section class="projects section" id="projects" style="padding-top: 40px;">
 
             <div class="catalog-container carousel-container reveal"
                 style="position: relative; overflow: hidden; width: 100%;">
@@ -106,6 +107,11 @@
             </div>
         </section>
 
+        <!-- Marcador do Catálogo -->
+        <div class="container reveal">
+            <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--primary-color), transparent); margin: 0 auto 60px auto; width: 80%; opacity: 0.4;">
+        </div>
+
         <!-- About Section -->
         <section class="about section" id="about">
             <div class="about-container container">
@@ -113,7 +119,7 @@
                     <h2 class="section-title left" id="about-title">Bem Brasil Regional Sobre</h2>
                     <p class="about-text" id="about-text">
                         <strong>Quero criar ambientes memoráveis!</strong><br><br>
-                        Desenvolvo projetos que vão além do visual, transformando espaços em lugares cheios de
+                        Desenvolvo catálogos que vão além do visual, transformando espaços em lugares cheios de
                         significado e lembranças.<br><br>
                         Com um enfoque único em personalização, funcionalidade e sustentabilidade, faço com que cada
                         ambiente reflita a sua própria essência.<br><br>
@@ -156,7 +162,17 @@
         <section class="contact section container" id="contact">
             <div class="contact-box reveal">
                 <div class="contact-left">
-                    <h2 class="section-title" id="contact-slogan-main">Vamos planejar seu próximo espaço?</h2>
+                    <!-- Logo no Contato -->
+                    <div class="contact-logo-wrapper" style="margin-bottom: 30px;">
+                        <a href="#" class="logo" style="justify-content: flex-start; transform: scale(1.2); transform-origin: left center;">
+                            <img src="https://lh3.googleusercontent.com/u/0/d/1rQQpfq2N7snAoA8oUjyQ-XmWFBhHbQ1Z" alt="Bem Brasil Regional" class="logo-img" id="contact-logo-img">
+                            <div class="logo-text-group" id="contact-logo-text-group">
+                                <span class="logo-name" id="contact-logo-name">BEM BRASIL</span>
+                                <span class="logo-type" id="contact-logo-type">REGIONAL</span>
+                            </div>
+                        </a>
+                    </div>
+                    <h2 class="section-title" id="contact-slogan-main" style="margin-top: 10px;">Vamos planejar seu próximo espaço?</h2>
                     <p class="contact-description" id="contact-slogan-sub">Entre em contato para uma consultoria
                         personalizada.</p>
                 </div>

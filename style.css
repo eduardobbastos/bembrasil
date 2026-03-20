@@ -99,7 +99,7 @@ h3 {
 }
 
 .logo-img {
-    height: 80px;
+    height: 100px;
     width: auto;
     object-fit: contain;
 }
@@ -995,11 +995,13 @@ h3 {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (max-width: 968px) {
     .catalog-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 576px) {
     .catalog-grid {
         grid-template-columns: 1fr;
@@ -1017,6 +1019,7 @@ h3 {
     flex: 0 0 100%;
     width: 100%;
 }
+
 /* Override Services Style */
 .services-list {
     display: flex;
@@ -1025,6 +1028,7 @@ h3 {
     margin-top: 50px;
     border-top: 1px solid rgba(139, 90, 43, 0.2);
 }
+
 .service-list-item {
     display: flex;
     align-items: center;
@@ -1033,9 +1037,11 @@ h3 {
     text-align: left;
     transition: background 0.3s ease;
 }
+
 .service-list-item:hover {
     background: rgba(139, 90, 43, 0.03);
 }
+
 .service-number {
     font-size: 4rem;
     font-weight: 200;
@@ -1043,6 +1049,7 @@ h3 {
     width: 120px;
     flex-shrink: 0;
 }
+
 .service-content-wrapper {
     flex-grow: 1;
     display: flex;
@@ -1050,14 +1057,17 @@ h3 {
     align-items: center;
     gap: 40px;
 }
+
 .service-text {
     max-width: 600px;
 }
+
 .service-list-item h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: #5D3314;
 }
+
 .service-link-wrapper {
     flex-shrink: 0;
 }
@@ -1068,11 +1078,13 @@ h3 {
         align-items: flex-start;
         padding: 30px 15px;
     }
+
     .service-content-wrapper {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .service-number {
         font-size: 3rem;
         width: 100%;
@@ -1099,32 +1111,42 @@ h3 {
     height: 80px;
 }
 
-.parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
     animation-delay: -2s;
     animation-duration: 7s;
 }
-.parallax > use:nth-child(2) {
+
+.parallax>use:nth-child(2) {
     animation-delay: -3s;
     animation-duration: 10s;
 }
-.parallax > use:nth-child(3) {
+
+.parallax>use:nth-child(3) {
     animation-delay: -4s;
     animation-duration: 13s;
 }
-.parallax > use:nth-child(4) {
+
+.parallax>use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
 }
 
 @keyframes move-forever {
-    0% { transform: translate3d(-90px, 0, 0); }
-    100% { transform: translate3d(85px, 0, 0); }
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }
 
 @media (max-width: 768px) {
-    .sea-waves svg { height: 40px; }
+    .sea-waves svg {
+        height: 40px;
+    }
 }

@@ -111,20 +111,28 @@ const PortfolioApp = (() => {
             if (heroTitle && homeTexto) heroTitle.innerHTML = homeTexto;
             if (heroDesc && homeSubTexto) heroDesc.innerHTML = homeSubTexto;
 
-            const logoImg = document.querySelector('.logo-img');
-            const logoTextGroup = document.querySelector('.logo-text-group');
+            const allLogoImgs = document.querySelectorAll('.logo-img');
+            const allLogoTextGroups = document.querySelectorAll('.logo-text-group');
             
             if (urlLogo) {
-                if (logoImg) logoImg.src = Common.getDirectImageUrl(urlLogo);
-                if (logoTextGroup && !textoLogo) logoTextGroup.style.display = 'none';
+                const directUrl = Common.getDirectImageUrl(urlLogo);
+                allLogoImgs.forEach(img => {
+                    img.src = directUrl;
+                    img.style.display = 'block';
+                });
+                if (!textoLogo) {
+                    allLogoTextGroups.forEach(group => group.style.display = 'none');
+                }
             }
             
             if (textoLogo) {
-                if (logoTextGroup) {
-                    logoTextGroup.style.display = 'flex';
-                    logoTextGroup.innerHTML = `<span class="logo-name" style="font-size: 1.4rem; font-weight: 700;">${textoLogo}</span>`;
+                allLogoTextGroups.forEach(group => {
+                    group.style.display = 'flex';
+                    group.innerHTML = `<span class="logo-name" style="font-size: 1.4rem; font-weight: 700;">${textoLogo}</span>`;
+                });
+                if (!urlLogo) {
+                    allLogoImgs.forEach(img => img.style.display = 'none');
                 }
-                if (!urlLogo && logoImg) logoImg.style.display = 'none';
             }
 
             const heroSection = document.getElementById('home');
@@ -407,19 +415,38 @@ const PortfolioApp = (() => {
 
     // ---- Public API ----
     return {
-        init: function () {
+        init: async function () {
             Common.initCursor();
             Common.initMobileMenu();
             Common.initModalLogic();
             
-            fetchProjects();
-            fetchAbout();
-            fetchServices();
-            fetchContact();
-            initScrollEvents();
-            
-            // Trigger initially
-            revealOnScroll();
+            try {
+                await Promise.all([
+                    fetchProjects(),
+                    fetchAbout(),
+                    fetchServices(),
+                    fetchContact()
+                ]);
+
+                const globalLoader = document.getElementById('global-loader');
+                if (globalLoader) {
+                    globalLoader.style.opacity = '0';
+                    setTimeout(() => globalLoader.remove(), 600);
+                }
+
+                initScrollEvents();
+                
+                // Trigger initially
+                revealOnScroll();
+            } catch (error) {
+                console.error("Error during app initialization:", error);
+                // Ensure loader is removed even if there's an error
+                const globalLoader = document.getElementById('global-loader');
+                if (globalLoader) {
+                    globalLoader.style.opacity = '0';
+                    setTimeout(() => globalLoader.remove(), 600);
+                }
+            }
         }
     };
 })();
